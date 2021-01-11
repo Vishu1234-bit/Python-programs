@@ -1,11 +1,11 @@
 from collections import deque
 cache_size = int(input())
-pgs = int(input())
+pages = int(input())
 arr= []
-for i in range(0,pgs):
+for i in range(0,pages):
     j = int(input())
     arr.append(j)
-print(cache_size,arr,pgs)
+print(cache_size,arr,pages)
 cache = deque()
 count=0
 for i in range(0,len(arr)):
