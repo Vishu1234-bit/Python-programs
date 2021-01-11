@@ -1,4 +1,4 @@
-def count2(input1,input2):
+def countof2(input1,input2):
     j= '2'
     count=0
     for i in range(input1,input2):
@@ -12,5 +12,5 @@ def numberof2(i):
             count=count+1
         i=i//10
     return count
-print(count2(2,60))
+print(countof2(2,60))
             
