@@ -1,0 +1,17 @@
+def maxSubArraySum(a,size):
+    ##Your code here
+    start = 0
+    end = 0
+    for i in range(0,size):
+       end = end+a[i]
+       if(start<end):
+           start = end
+       if(end<0):
+           end= 0
+    return start
+size = int(input())
+a = []
+for i in range(0,size):
+     j = int(input())
+     a.append(j)
+maxSubArraySum(a,size)
