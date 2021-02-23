@@ -1,3 +1,6 @@
+#User function Template for python3
+
+##Complete this function
 def maxSubArraySum(a,size):
     ##Your code here
     start = 0
@@ -9,9 +12,28 @@ def maxSubArraySum(a,size):
        if(end<0):
            end= 0
     return start
-size = int(input())
-a = []
-for i in range(0,size):
-     j = int(input())
-     a.append(j)
-maxSubArraySum(a,size)
+
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+import math
+
+ 
+def main():
+        T=int(input())
+        while(T>0):
+            
+            n=int(input())
+            
+            arr=[int(x) for x in input().strip().split()]
+            
+            print(maxSubArraySum(arr,n))
+            
+            T-=1
+
+
+if __name__ == "__main__":
+    main()
+# } Driver Code Ends
