@@ -1,0 +1,33 @@
+def duplicates(arr, n): 
+	# code here
+    a = [0]*n
+    b =[]
+    for i in arr:
+        a[i]+=1
+    for i in range(n):
+        if(a[i]>1):
+            b.append(i)
+    if(len(b)==0):
+        b.append(-1)
+        return b
+    else:
+        return b
+            
+	        
+	    
+
+#{ 
+#  Driver Code Starts
+if(__name__=='__main__'):
+    t = int(input())
+    for i in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        res = duplicates(arr, n)
+        for i in res:
+            print(i,end=" ")
+        print()
+
+
+
+# } Driver Code Ends
