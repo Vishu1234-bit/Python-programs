@@ -8,7 +8,7 @@ def alternatingSort(a):
     
      b = b[0:len(a)]
      print(b)
-     res = sorted(set(a),key = lambda i : a.count(i))
+     res = sorted(set(a))
      print(res)
      if(b==res):
          return True
