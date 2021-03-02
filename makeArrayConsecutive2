@@ -1,0 +1,9 @@
+def makeArrayConsecutive2(statues):
+    statues.sort()
+    no = 0
+    for i in range(min(statues),max(statues)):
+        if i not in statues:
+            no+=1
+    return no
+statues=list(map(int,input().split()))
+print(makeArrayConsecutive2(statues))
