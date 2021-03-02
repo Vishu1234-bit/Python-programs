@@ -1,0 +1,11 @@
+def centuryFromYear(year):
+    syear = str(year)
+    syear = syear.zfill(4)
+    syear1 = syear[0:2]
+    syear2 = syear[2:4]
+    if(syear2=='00'):
+        return int(syear1)
+    else:
+        return int(syear1)+1
+year = int(input())
+print(centuryFromYear(year))
