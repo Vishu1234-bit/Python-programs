@@ -1,0 +1,11 @@
+def allLongestStrings(inputArray):
+    length = []
+    longest=[]
+    for i in inputArray:
+        length.append(len(i))
+    for i in inputArray:
+        if(len(i)==max(length)):
+            longest.append(i)
+    return longest 
+a = ["aba", "aa", "ad", "vcd", "aba"]
+print(allLongestStrings(a))
