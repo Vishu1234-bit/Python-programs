@@ -1,0 +1,12 @@
+def commonCharacterCount(s1, s2):
+    s= 0
+    s1a = list(s1)
+    s2a = list(s2)
+    for i in s1a:
+        if i in s2a:
+            s+=1
+            s2a.remove(i)
+    return s
+s1=input()
+s2 input()
+print(commonCharacterCount(s1, s2))
