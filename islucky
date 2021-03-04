@@ -1,0 +1,12 @@
+def isLucky(n):
+    strn = str(n)
+    first = strn[0:len(strn)//2]
+    last= strn[len(strn)//2:len(strn)]
+    first = [int(i) for i in first]
+    last = [int(i) for i in last]
+    if(sum(first)==sum(last)):
+        return True
+    else:
+        return False
+n=int(input())
+print(isLucky(n))
