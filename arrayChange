@@ -1,0 +1,12 @@
+def arrayChange(inputArray):
+    sum=0
+    q=inputArray[0]
+    for i in inputArray[1:]:
+        if(i<=q):
+            sum+=q-i+1
+            q+=1
+        else:
+            q=i
+    return sum
+inputArray = [1, 1, 1]
+print(arrayChange(inputArray))
