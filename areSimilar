@@ -1,0 +1,16 @@
+def areSimilar(a, b):
+    diffa=[]
+    diffb=[]
+    for i in range(0,len(a)):
+        if(a[i]!=b[i]):
+            diffa.append(a[i])
+            diffb.append(b[i])
+    if(len(diffa)==0 and len(diffb)==0):
+        return True
+    if(len(diffa)==len(diffb)==2):
+        if(diffa[0]==diffb[1] and diffa[1]==diffb[0]):
+            return True
+    return False
+ a = [1, 2, 3]
+b = [1, 2, 3]
+print(areSimilar(a,b))
