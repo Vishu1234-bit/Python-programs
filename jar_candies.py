@@ -6,5 +6,5 @@ if(sold>=1 & sold<=5):
     print("NUMBER OF CANDIES AVAILABLE :",n-sold)
 else:
     print("INVALID INPUT")
-    print("NUMBER OF CANDIES LEFT : ",n)
+    print("NUMBER OF CANDIES LEFT :",n)
     
