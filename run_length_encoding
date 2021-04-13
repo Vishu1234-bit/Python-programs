@@ -1,0 +1,22 @@
+def encode(arr):
+    # Code here
+    result=""
+    a=arr[0]
+    repe=0
+    for i in range(len(arr)):
+        if(arr[i]==a):
+            repe+=1
+            #print(arr[i],a,repe)
+        else:
+            #print(a,repe)
+            result=result+a+str(repe)  
+            a=arr[i]
+            repe=1
+    result = result+a+str(repe)    
+        
+return result
+if __name__ = "__main__":
+      t=int(input())
+      for i in range(t):
+           arr=input().strip()
+           print(encode(arr))
