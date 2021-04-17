@@ -1,0 +1,26 @@
+def main():
+     v = input()
+     n = int(input())
+     for i in range(n):
+         p=''
+         b = input()
+         i=0
+         j=0
+         vlen = len(v)
+         blen = len(b)
+         while(i<vlen and j<blen):
+             if(v[i]==b[j]):
+                p = p+v[i]
+                i=i+1
+                j=j+1
+             else:
+                i=i+1
+         if(p==b):
+             print("POSITIVE")
+         else:
+             print("NEGATIVE")
+         
+
+ # Write code here 
+
+main()
