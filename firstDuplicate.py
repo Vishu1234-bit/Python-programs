@@ -8,6 +8,6 @@ def firstDuplicate(a):
             b[i] =1
     return -1
         
-a = list(map(int,input().split()))
-print(firstDuplicate(a))
+arr = list(map(int,input().split()))
+print(firstDuplicate(arr))
 
