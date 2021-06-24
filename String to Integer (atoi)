@@ -1,0 +1,26 @@
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        num = ['0','1','2','3','4','5','6','7','8','9']
+        signs = ['-','+']
+        res=""
+        string=s.lstrip()
+        if(string and string[0] in signs):
+            res=res+string[0]
+            string=string[1:]
+        for i in string:
+            if not i in num:
+                break
+            res=res+i
+            
+        if(len(res)==0 or res in signs):
+            return 0
+        else:
+            res = int(res)
+        if(res<-2147483648):
+            return -2147483648
+        elif(res>2147483647):
+            return 2147483647
+        else:
+            return res
+                
+        
