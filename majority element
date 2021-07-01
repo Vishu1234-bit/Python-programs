@@ -1,0 +1,17 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        max_count = len(nums)/2
+        dict={}
+        for i in nums:
+            if i not in dict:
+                dict[i]=1
+            else:
+                dict[i]+=1
+        for i in dict:
+            if(dict[i]>max_count):
+                return i
+        
