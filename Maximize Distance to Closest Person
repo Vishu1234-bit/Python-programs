@@ -1,0 +1,23 @@
+class Solution(object):
+    def maxDistToClosest(self, seats):
+        """
+        :type seats: List[int]
+        :rtype: int
+      """
+        prev_seat  =None
+        dist = 0
+        for i in range(len(seats)):
+            if(seats[i] ==1):
+                if(prev_seat==None):
+                    dist = i
+                else:
+                    dist = max(dist,(i-prev_seat)//2)
+                prev_seat=i
+        dist = max(dist,len(seats)-1-prev_seat)
+        return dist
+
+                
+                
+                
+                
+        
