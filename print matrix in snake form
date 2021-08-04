@@ -1,0 +1,17 @@
+class Solution:
+    
+    #Function to return list of integers visited in snake pattern in matrix.
+    def snakePattern(self, matrix): 
+       # code here 
+       #print(matrix)
+       result =[]
+       index=0
+       for row in matrix:
+           if(index%2==0):
+               for col in row:
+                   result.append(col)
+           else:
+               for col in row[::-1]:
+                   result.append(col)
+           index+=1
+       return result
