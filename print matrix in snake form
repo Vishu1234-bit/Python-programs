@@ -1,6 +1,6 @@
 class Solution:
     
-    #Function to return list of integers visited in snake pattern in matrix.
+     #Function to return list of integers visited in snake pattern in matrix.
     def snakePattern(self, matrix): 
        # code here 
        #print(matrix)
