@@ -1,0 +1,24 @@
+n = int(input())
+scores = {}
+for i in range((n*(n-1))//2):
+    team1,team2,score = map(str,input().split())
+    t1_score,t2_score = map(int,score.split('-'))
+    if team1 not in scores:
+        scores[team1]=0
+    if team2 not in scores:
+        scores[team2]=0
+    if(t1_score>t2_score):
+        scores[team1]+=3
+    elif(t1_score<t2_score):
+        scores[team2]+=3
+    else:
+        scores[team1]+=1 
+        scores[team2]+=1 
+win= 0
+winning_team = ""
+for team,score in scores.items():
+    if(score>win):
+        win = score
+        winning_team = team
+print(winning_team)
+print(win)
