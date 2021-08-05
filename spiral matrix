@@ -1,0 +1,49 @@
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        
+        
+        startrow = 0
+        endrow = len(matrix)-1
+        startcol = 0
+        endcol = len(matrix[0])-1
+        result = []
+        print(startrow,endrow,startcol,endcol)
+        def layer_appending(matrix,startrow,endrow,startcol,endcol):
+                    layer=[]
+                    #top = col++
+                    row = startrow
+                    col = startcol
+                    while(col<=endcol):
+                            layer.append(matrix[row][col])
+                            col+=1
+                     #right = row++
+                    row = startrow+1
+                    col = endcol
+                    while(row<=endrow):
+                            layer.append(matrix[row][col])
+                            row+=1
+                    #bottom - col--
+                    if(startrow!=endrow):
+                        row = endrow
+                        col = endcol-1
+                        while(col>=startcol):
+                            layer.append(matrix[row][col])
+                            col-=1
+                    #top - row--
+                    if(startcol!=endcol):
+                        row = endrow-1
+                        col = startcol
+                        while(row>startrow):
+                            layer.append(matrix[row][col])
+                            row-=1
+                    return layer
+        
+        while(startrow<=endrow and startcol<=endcol):
+            print(layer_appending(matrix,startrow,endrow,startcol,endcol))
+            result.extend(layer_appending(matrix,startrow,endrow,startcol,endcol))
+            print(result)
+            startrow+=1
+            endrow-=1
+            startcol+=1
+            endcol-=1
+        return result
