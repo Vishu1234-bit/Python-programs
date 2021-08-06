@@ -1,0 +1,23 @@
+import sys
+def isPalindrome(string):
+    if(len(string)==1):
+        return True
+    string1 = string[::-1]
+    return string == string1
+input_str = input()
+for i in range(1,len(input_str)-1):
+    str1 = input_str[:i]
+    #print(str1)
+    if(isPalindrome(str1)):
+        for j in range(1,len(input_str)-1):
+            str2 = input_str[i:i+j]
+            str3 = input_str[i+j:]
+            #print(str2)
+            #print(str3)
+            if(isPalindrome(str2) and isPalindrome(str3)):
+                print(str1)
+                print(str2)
+                print(str3)
+                sys.exit()
+print("Impossible")
+
