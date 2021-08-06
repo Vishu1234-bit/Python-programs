@@ -1,0 +1,24 @@
+class Solution:
+    def diagonalSort(self, mat: List[List[int]]) -> List[List[int]]:
+        def diagonalSort(mat,row,col):
+            diagonalelements = []
+            r = row
+            c = col
+            while(row<len(mat) and col<len(mat[0])):
+                diagonalelements.append(mat[row][col])
+                row+=1
+                col+=1
+            diagonalelements.sort()
+            row = r
+            col = c
+            for ele in diagonalelements:
+                mat[row][col]=ele
+                row+=1
+                col+=1
+            return mat
+        for i in range(0,len(mat)):
+            diagonalSort(mat,i,0)
+        for j in range(0,len(mat[0])):
+            diagonalSort(mat,0,j)
+        return mat
+        
