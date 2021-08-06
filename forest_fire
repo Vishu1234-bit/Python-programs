@@ -1,0 +1,30 @@
+def counttime(row,col,cur_time):
+    if(row<0 or row>m-1 or col<0 or col>n-1):
+        return 
+    if(forest[row][col]=='W'):
+        return 
+    if(time[row][col]!=0 and cur_time>=time[row][col]):
+        return
+    time[row][col] = cur_time
+    counttime(row-1,col,cur_time+1)
+    counttime(row,col-1,cur_time+1)
+    counttime(row-1,col-1,cur_time+1)
+    counttime(row-1,col+1,cur_time+1)
+    counttime(row,col+1,cur_time+1)
+    counttime(row+1,col+1,cur_time+1)
+    counttime(row+1,col,cur_time+1)
+    counttime(row+1,col-1,cur_time+1)
+m,n=map(int,input().split())
+ir,ic = map(int,input().split())
+forest =[]
+for i in range(0,m):
+    col = list(map(str,input().split()))
+    forest.append(col)
+time = [[0 for row in range(0,m)] for col in range(0,n)]
+counttime(ir-1,ic-1,1)
+max_time = -1 
+for i in range(0,m):
+    for j in range(0,n):
+        if(time[i][j]>max_time):
+            max_time = time[i][j]
+print(max_time)
