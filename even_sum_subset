@@ -1,0 +1,6 @@
+low,high = map(int,input().split())
+k = int(input())
+total_count = high-low+ 1 
+subsets = total_count**k 
+even_sum_subsets = subsets//2
+print(even_sum_subsets)
