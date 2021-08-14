@@ -1,0 +1,15 @@
+class Solution:
+    def getAngle(self, H , M):
+        # code here
+        if(H==12):
+            H=0
+        if(M==60):
+            M=0
+            H+=1
+            if(H>12):
+                H=H-12
+        hours = (H*60+M)*0.5
+        minute = 6*M
+        diff = abs(hours-minute)
+        return(int(min(360-diff,diff)))
+        
